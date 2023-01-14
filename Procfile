@@ -1,0 +1,1 @@
+web gunicorn django-wedding-website-master.wsgi:application --log-file -
