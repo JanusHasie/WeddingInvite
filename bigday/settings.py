@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
-import django_heroku
-import dj_database_url
+# import django_heroku
+# import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'u7!-y4k1c6b44q507nr_l+c^12o7ur++cpzyn!$65w^!gum@h%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
@@ -129,7 +129,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join('bigday', 'static'),
 )
-django_heroku.settings(locals())
 
 # This is used in a few places where the names of the couple are used
 BRIDE_AND_GROOM = 'Janus & Melissa'
